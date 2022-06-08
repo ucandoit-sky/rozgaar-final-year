@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>RozGAAR | Update Profile</title>
+    <title>RozGAAR | अपडेट प्रोफ़ाइल</title>
     <link
       href="https://fonts.googleapis.com/css?family=Varela+Round"
       rel="stylesheet"
@@ -56,14 +56,14 @@
                 href="/about-us"
                 class="nav-link"
                 id="node"
-                >About</a
+                >हमारे बारे में</a
               >
             </li>
             <li class="nav-item">
-              <a href="#contact/to/us" class="nav-link" id="node">Contact</a>
+              <a href="#contact/to/us" class="nav-link" id="node">संपर्क करें</a>
             </li>
             <li class="nav-item">
-              <a href="/users/dashboard" class="nav-link" id="node">Dashboard</a>
+              <a href="/users/dashboard" class="nav-link" id="node">डैशबोर्ड</a>
             </li>
           </ul>
           <% if(user) {%>
@@ -75,7 +75,15 @@
                   href="/users/profile"
                   aria-expanded="false"
                   style="text-align: center"
-                  >Profile</a
+                  >प्रोफ़ाइल</a
+                >
+                <a
+                  class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
+                  id="lop"
+                  href="/users/refer"
+                  aria-expanded="false"
+                  style="text-align: center"
+                  >Refer</a
                 >
                 <a
                   class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
@@ -83,7 +91,7 @@
                   href="/auth/logout"
                   aria-expanded="false"
                   style="text-align: center"
-                  >Logout</a
+                  >लॉग आउट</a
                 >
               </li>
             </ul>
@@ -97,12 +105,12 @@
         <div class="col-md-3 register-left">
           <img src="/img/rocket.png" alt="" />
           <% if(!user.contact1) { %>
-            <h3 style="color: rgba(232, 243, 234, 0.6);">Welcome</h3>
-            <p style="color: rgba(232, 243, 234, 0.6);">You are only few seconds away !!</p>
+            <h3 style="color: rgba(232, 243, 234, 0.6);">स्वागत</h3>
+            <p style="color: rgba(232, 243, 234, 0.6);">आप कुछ ही सेकंड दूर हैं !!</p>
           <% } %>
           <% if(user.contact1) { %>
-            <h3 style="color: rgba(232, 243, 234, 0.6);">Update Profile</h3>
-            <p style="color: rgba(232, 243, 234, 0.6);"> Change your prolife according to your needs. We got you covered!!</p>
+            <h3 style="color: rgba(232, 243, 234, 0.6);">अपडेट प्रोफ़ाइल</h3>
+            <p style="color: rgba(232, 243, 234, 0.6);"> अपनी आवश्यकताओं के अनुसार अपना जीवन काल बदलें। हमने आपको कवर किया !!</p>
           <% } %>
           
           <!-- <input type="submit" name="" value="Login" /><br /> -->
@@ -120,7 +128,7 @@
                   role="tab"
                   aria-controls="home"
                   aria-selected="true"
-                  >Worker</a
+                  >मज़दूर</a
                 >
               </li>
               <li class="nav-item">
@@ -132,7 +140,7 @@
                   role="tab"
                   aria-controls="profile"
                   aria-selected="false"
-                  >Recruiter</a
+                  >भर्ती</a
                 >
               </li>
               
@@ -145,7 +153,7 @@
               role="tabpanel"
               aria-labelledby="home-tab"
             >
-              <h3 class="register-heading">Apply as Worker</h3>
+              <h3 class="register-heading">कार्यकर्ता के रूप में आवेदन करें</h3>
               <!-- first form -->
               <form action="/user-worker" method="POST">
                 <div class="row register-form">
@@ -178,7 +186,7 @@
                         minlength="10"
                         maxlength="10"
                         name="contact1"
-                        placeholder="Primary Contact Number"
+                        placeholder="प्राथमिक संपर्क नंबर"
                         required
                         class="form-control"
                         <% if(user.contact1) { %>
@@ -188,7 +196,7 @@
                     </div>
                     <div class="form-group">
                       <label class="jobslabel"
-                        >Choose your preferred jobs</label
+                        >अपनी पसंदीदा नौकरी चुनें</label
                       >
                       <div class="checkbox">
                         <input type="checkbox" id="checkbox" name="Painter" value="" />
@@ -232,7 +240,7 @@
                         type="text"
                         class="form-control"
                         name="address"
-                        placeholder="Address"
+                        placeholder="पता"
                         required
                         <% if(user.address) { %>
                           value=<%= user.address %>
@@ -250,7 +258,7 @@
                               checked
                             <% } %>
                           />
-                          <span> Male &nbsp;&nbsp;</span>
+                          <span> पुस्र्ष &nbsp;&nbsp;</span>
                         </label>
                         <label class="radio inline">
                           <input type="radio" 
@@ -259,7 +267,7 @@
                           <% if(user.gender=="female") { %>
                             checked
                           <% } %>/>
-                          <span>Female </span>
+                          <span>महिला </span>
                         </label>
                       </div>
                     </div>
@@ -270,7 +278,7 @@
                         minlength="10"
                         maxlength="10"
                         name="contact2"
-                        placeholder="Secondary Contact Number"
+                        placeholder="माध्यमिक संपर्क नंबर"
                         class="form-control"
                         <% if(user.contact2) { %>
                           value=<%= user.contact2 %>
@@ -281,14 +289,14 @@
                       <input
                         type="submit"
                         class="btnRegister"
-                        value="Update Profile"
+                        value="अपडेट प्रोफ़ाइल"
                       />
                     
                      <%} else {%>
                       <input
                           type="submit"
                           class="btnRegister1"
-                          value="Update Profile"  
+                          value="अपडेट प्रोफ़ाइल"  
                           disabled
                         />
                     <%}%>
@@ -304,7 +312,7 @@
               role="tabpanel"
               aria-labelledby="profile-tab"
             >
-              <h3 class="register-heading">Apply as Recruiter</h3>
+              <h3 class="register-heading">भर्ती के रूप में आवेदन करें</h3>
               <!-- second form -->
               <form action="/user-recruiter" method="POST">
                 <div class="row register-form margin-second-form">
@@ -339,7 +347,7 @@
                         minlength="10"
                         maxlength="10"
                         name="contact1"
-                        placeholder="Primary Contact Number"
+                        placeholder="प्राथमिक संपर्क नंबर"
                         required
                         class="form-control"
                         <% if(user.contact1) { %>
@@ -355,7 +363,7 @@
                         type="text"
                         class="form-control"
                         name="address"
-                        placeholder="Address"
+                        placeholder="पता"
                         required
                         <% if(user.address) { %>
                           value=<%= user.address %>
@@ -373,7 +381,7 @@
                               checked
                             <% } %>
                           />
-                          <span> Male &nbsp;&nbsp;</span>
+                          <span> पुस्र्ष &nbsp;&nbsp;</span>
                         </label>
                         <label class="radio inline">
                           <input type="radio" 
@@ -382,7 +390,7 @@
                           <% if(user.gender=="female") { %>
                             checked
                           <% } %>/>
-                          <span>Female </span>
+                          <span>महिला </span>
                         </label>
                       </div>
                     </div>
@@ -393,7 +401,7 @@
                         minlength="10"
                         maxlength="10"
                         name="contact2"
-                        placeholder="Secondary Contact Number"
+                        placeholder="माध्यमिक संपर्क नंबर"
                         class="form-control"
                         <% if(user.contact2) { %>
                           value=<%= user.contact2 %>
@@ -404,14 +412,14 @@
                       <input
                         type="submit"
                         class="btnRegister"
-                        value="Update Profile"
+                        value="अपडेट प्रोफ़ाइल"
                       />
                     
                      <%} else {%>
                       <input
                           type="submit"
                           class="btnRegister1"
-                          value="Update Profile"
+                          value="अपडेट प्रोफ़ाइल"
                           disabled
                         />
                     <%}%>

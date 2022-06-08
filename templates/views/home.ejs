@@ -56,20 +56,29 @@
                 href="/about-us"
                 class="nav-link"
                 id="node"
-                >About</a
+                >हमारे बारे में</a
               >
             </li>
             <li class="nav-item">
-              <a href="#contact/to/us" class="nav-link" id="node">Contact</a>
+              <a href="#contact/to/us" class="nav-link" id="node">
+                संपर्क करें</a>
             </li>
             <% if(user) {%>
             <li class="nav-item">
-              <a href="/users/dashboard" class="nav-link" id="node">Dashboard</a>
+              <a href="/users/dashboard" class="nav-link" id="node">डैशबोर्ड</a>
             </li>
             <%}%>
           </ul>
           <% if(!user) {%>
           <ul class="nav navbar-nav navbar-right ml-auto">
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="mr-1 youtube-link video-gallery col-xl-4 container btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" youtubeid="BAe1Htj31pQ" id="lop"
+                aria-expanded="false"
+                style="text-align: center"
+                width="100%" height="220" src="https://www.youtube.com/watch?v=BAe1Htj31pQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                जुडना सीखे
+        </a>
+            </li>
             <li class="nav-item">
               <a
                 class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
@@ -77,9 +86,10 @@
                 href="/auth/login"
                 aria-expanded="false"
                 style="text-align: center"
-                >Get Started</a
+                >हमसे जुड़ें</a
               >
             </li>
+            
           </ul>
           <% } %> <% if(user) {%>
           <ul class="nav navbar-nav navbar-right ml-auto">
@@ -90,7 +100,15 @@
                 href="/users/profile"
                 aria-expanded="false"
                 style="text-align: center"
-                >Profile</a
+                >प्रोफ़ाइल</a
+              >
+              <a
+                class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
+                id="lop"
+                href="/users/refer"
+                aria-expanded="false"
+                style="text-align: center"
+                >Refer</a
               >
               <a
                 class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
@@ -98,8 +116,9 @@
                 href="/auth/logout"
                 aria-expanded="false"
                 style="text-align: center"
-                >Logout</a
+                >लॉग आउट</a
               >
+              
             </li>
           </ul>
           <%} %>
@@ -212,7 +231,7 @@ As long as the app and the information and services are provided free of charge,
     </div>
     <% if(!user) {%>
     <div class="container py-4 text-center">
-      <h1 style="color: aliceblue; font-family: 'Poppins', sans-serif; font-weight: normal;" class="cont">So, take a step closer to us now.</h1>
+      <h1 style="color: aliceblue; font-family: 'Poppins', sans-serif; font-weight: normal;" class="cont">तो, अब हमारे करीब एक कदम उठाएं</h1>
       <div class="head2">
         
         <a
@@ -223,7 +242,7 @@ As long as the app and the information and services are provided free of charge,
           style="text-align: center;"
           class="btn btn-primary get-started-btn mt-1 mb-1"
         >
-        Get Started
+        हमसे जुड़ें
       </a>
       
       </div>
@@ -273,10 +292,21 @@ As long as the app and the information and services are provided free of charge,
     <footer class="footer2">
       <div class="container">
         <div class="row">
-          <div class="col-xl-12">Copyright © 2020 Creative_Crew</div>
+          <div class="col-xl-12">Copyright © 2022</div>
         </div>
       </div>
     </footer>
     <script src="/js/homepage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="files/youtube-popup.css">
+<link rel="stylesheet" href="files/grt-youtube-popup.css">
+<script src="files/grt-youtube-popup.js"></script>
+<script type="text/javascript">
+	$(".youtube-link").grtyoutube({
+		autoplay:true,
+		theme:"dark"
+	});
+</script>
   </body>
 </html>
+

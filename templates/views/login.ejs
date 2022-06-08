@@ -40,11 +40,11 @@
                 href="/about-us"
                 class="nav-link"
                 id="node"
-                >About</a
+                >हमारे बारे में</a
               >
             </li>
             <li class="nav-item">
-              <a href="#contact/to/us" class="nav-link" id="node">Contact</a>
+              <a href="#contact/to/us" class="nav-link" id="node">संपर्क करें</a>
             </li>
           </ul>
           
@@ -94,15 +94,42 @@ As long as the app and the information and services are provided free of charge,
     <ul class="form-wrapper" >					
         <li type="none" >
                 <form action="/post" method="post" >
-                <p class="hint-text" style="text-align: center; font-size: 20px; font-weight: bold; color: #254e58;">There's no need to remember a username or password, all you need is a Google Account. </p>
+                <p class="hint-text" style="text-align: center; font-size: 20px; font-weight: bold; color: #254e58;">उपयोगकर्ता नाम या पासवर्ड याद रखने की कोई आवश्यकता नहीं है, आपको बस एक Google खाता चाहिए। </p>
                 <div class="form-group social-btn clearfix">
                     <a href="/auth/google" class="btn btn-primary" id="b1" style="background-color:  rgba(232, 243, 234); border: 1px solid red; width: 100%;"><i class="fa fa-google" style="color: red;"></i><span style="color: red;padding: 8px;">Google</span></a>
                 </div>
-                <p class="hint-text" style="text-align: center; font-weight: bold; color: #254e58;">Do not have Google account? <a style="text-decoration: none;" target="_blank "href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp">Create one here.</a></p>
+                <p class="hint-text" style="text-align: center; font-weight: bold; color: #254e58;">क्या आपके पास Google खाता नहीं है? <a style="text-decoration: none;" target="_blank "href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp">यहां बनाएं।</a></p>
             </form>
         </li>
+        <li type="none">
+          <form action="/auth/get-otp" method="post" >
+            <input type="text" name="phone" pattern="[6789][0-9]{9}"
+            <% if(phone) { %>
+              value=<%= phone %>
+            <% } %>
+            >
+            <button
+              class="btn btn-3  btn-5 btn-lg pull-right" style="margin-bottom: 170px;"  type="submit"
+              >
+              Get OTP
+              </button>
+          </form>
+          <form action="/auth/submit-otp" method="post" >
+            <input type="text" name="otp" pattern="{4}">
+            <input type="text" name="phone" pattern="[6789][0-9]{9}" hidden
+            <% if(phone) { %>
+              value=<%= phone %>
+            <% } %>
+            >
+            <button
+              class="btn btn-3  btn-5 btn-lg pull-right" style="margin-bottom: 170px;"  type="submit"
+              >
+                Submit
+              </button>
+          </form>
+        </li>
     </ul>
-</div>
+</div>  
 
 
 <br><br><br><br><br><br><!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i></button> -->

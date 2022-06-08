@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Profile | RozGAAR</title>
+    <title>प्रोफ़ाइल | RozGAAR</title>
     <link
       href="https://fonts.googleapis.com/css?family=Varela+Round"
       rel="stylesheet"
@@ -56,14 +56,14 @@
                 href="/about-us"
                 class="nav-link"
                 id="node"
-                >About</a
+                >हमारे बारे में</a
               >
             </li>
             <li class="nav-item">
-              <a href="#contact/to/us" class="nav-link" id="node">Contact</a>
+              <a href="#contact/to/us" class="nav-link" id="node">संपर्क करें</a>
             </li>
             <li class="nav-item">
-              <a href="/users/dashboard" class="nav-link" id="node">Dashboard</a>
+              <a href="/users/dashboard" class="nav-link" id="node">डैशबोर्ड</a>
             </li>
           </ul>
 
@@ -75,7 +75,7 @@
                 href=""
                 aria-expanded="false"
                 style="text-align: center"
-                >Profile</a
+                >प्रोफ़ाइल</a
               >
               <a
                 class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
@@ -83,7 +83,7 @@
                 href="/auth/logout"
                 aria-expanded="false"
                 style="text-align: center"
-                >Logout</a
+                >लॉग आउट</a
               >
             </li>
           </ul>
@@ -115,7 +115,7 @@
               <a  
               href="/users/profile/update"
               class="btn btn-info btn-sm">
-                Update Profile
+              अपडेट प्रोफ़ाइल
               </a>
               <!--<button type="button" class="btn btn-danger btn-sm">Button 2</button>-->
             </div>
@@ -125,22 +125,22 @@
         </div>
         <div class="col-md-9">
           <div class="profile-content" style="color: rgba(232, 243, 234);">
-            <h5>Name</h5>
+            <h5>नाम</h5>
             <p style="text-transform: capitalize"><%= user.username %></p>
-            <h5>Email</h5>
+            <h5>ईमेल</h5>
             <p><%= user.email %></p>
-            <h5>Address</h5>
+            <h5>पता</h5>
             <p>
               <%= user.address %>
             </p>
-            <h5>Primary Contact No</h5>
+            <h5>प्राथमिक संपर्क नंबर</h5>
             <p><%= user.contact1 %></p>
             <% if(user.contact2) { %>
-            <h5>Secondary Contact No</h5>
+            <h5>माध्यमिक संपर्क नंबर</h5>
             <p><%= user.contact2 %></p>
             <% } %>
             <% if(user.type=="worker") { %>
-              <h5>Preferred Jobs</h5>
+              <h5>पसंदीदा नौकरियां</h5>
               <p style="text-transform: capitalize">
                 <% user.jobTypes.forEach((job)=>{ %>
                   <%= job %> &nbsp
@@ -155,7 +155,7 @@
               aria-expanded="false"
               style="text-align: center; "
 
-            >Your Dashboard</a>
+            >आपका डैशबोर्ड</a>
 
           </div>
         </div>

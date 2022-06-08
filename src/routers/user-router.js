@@ -16,11 +16,14 @@ router.post('/users',async (req,res)=>{
     }
 })
 
-router.post('/user-worker' ,authCheck, async (req,res)=>{
-     const user = await User.findOne({googleID : req.user.googleID})
-     user.email=req.body.email
+router.post('/submit-referral' , async (req,res)=>{
+     
+     user = new User()
+     user.googleID = "randomGoogleId"
+     user.username = req.body.name
+     user.email="abc@referral.com"
      user.address=req.body.address
-     user.contact1=req.body.contact1
+     user.contact1=req.body.phoneNumber
      if(req.body.contact2)
      user.contact2=req.body.contact2
      user.type="worker"
@@ -32,6 +35,24 @@ router.post('/user-worker' ,authCheck, async (req,res)=>{
      req.user=user
      await user.save()
     res.redirect('/users/profile')
+})
+
+router.post('/user-worker' ,authCheck, async (req,res)=>{
+    const user = await User.findOne({googleID : req.user.googleID})
+    user.email=req.body.email
+    user.address=req.body.address
+    user.contact1=req.body.contact1
+    if(req.body.contact2)
+    user.contact2=req.body.contact2
+    user.type="worker"
+    const jobs = ['Painter','Gardener','Maid','Watchman']
+    jobs.forEach((job)=>{
+        if((job in req.body) && !user.jobTypes.includes(job)) user.jobTypes.push(job)
+    })
+    
+    req.user=user
+    await user.save()
+   res.redirect('/users/profile')
 })
 
 router.post('/user-recruiter' ,authCheck, async (req,res)=>{
@@ -57,6 +78,10 @@ router.get('/users/profile/update' , authCheck ,(req,res)=>{
 router.get('/users/profile' , authCheck ,profileCheck ,(req,res)=>{
    res.render('profile',{user:req.user})
 })
+
+router.get('/users/refer' , authCheck ,profileCheck ,(req,res)=>{
+    res.render('refer',{user:req.user})
+ })
 
 router.get('/users/jobs', authCheck , profileCheck , async (req,res)=>{
      const jobs = await Job.find({ownerID : req.user.googleID})    

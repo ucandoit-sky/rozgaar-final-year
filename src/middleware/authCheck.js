@@ -1,8 +1,12 @@
 const authCheck = (req, res, next) => {
-    if(!req.user){
+    console.log(req.session.user)
+
+    if(!req.user && req.session.user ){
+        req.user = req.session.user;
+    } 
+    if (!req.user) {
         res.redirect('/auth/login');
-    } else {
-        next();
     }
+    next()
 }
 module.exports = authCheck

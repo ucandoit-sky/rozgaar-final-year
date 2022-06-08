@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>About Us | RozGAAR</title>
+    <title>हमारे बारे में Us | RozGAAR</title>
     <link
       href="https://fonts.googleapis.com/css?family=Varela+Round"
       rel="stylesheet"
@@ -60,16 +60,16 @@
                 href="/about-us"
                 class="nav-link"
                 id="node"
-                >About</a
+                >हमारे बारे में</a
               >
             </li>
             <li class="nav-item">
-              <a href="#contact/to/us" class="nav-link" id="node">Contact</a>
+              <a href="#contact/to/us" class="nav-link" id="node">संपर्क करें</a>
             </li>
 
             <% if(user) {%>
               <li class="nav-item">
-                <a href="/users/dashboard" class="nav-link" id="node">Dashboard</a>
+                <a href="/users/dashboard" class="nav-link" id="node">डैशबोर्ड</a>
               </li>
               <%}%>
             </ul>
@@ -95,7 +95,15 @@
                   href="/users/profile"
                   aria-expanded="false"
                   style="text-align: center"
-                  >Profile</a
+                  >प्रोफ़ाइल</a
+                >
+                <a
+                  class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
+                  id="lop"
+                  href="/users/refer"
+                  aria-expanded="false"
+                  style="text-align: center"
+                  >Refer</a
                 >
                 <a
                   class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1"
@@ -103,7 +111,7 @@
                   href="/auth/logout"
                   aria-expanded="false"
                   style="text-align: center"
-                  >Logout</a
+                  >लॉग आउट</a
                 >
               </li>
             </ul>
