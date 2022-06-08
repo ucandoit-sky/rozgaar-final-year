@@ -16,6 +16,16 @@ As Recruiter, You can
 * Look for the worker you need from your dashboard.
 * Create job openings on which a worker can contact you.
 * Filter worker profiles according to your needs.
+* Refer other workers who do not have proper internet connection.
+
+### Our Features
+- Easy to understand interface and home page with a video for workers to understand how to use the website
+- Login using Mobile number with simple OTP verification
+- Google authorization login system for both workers and recruiters 
+- Job posting service for recruiters who can contact a worker to hire him/ her directly as well, 
+- Choice-based dashboard to display jobs and profiles with dynamic data update, 
+- Filter options according to preferences etc.
+- Workers can refer other worker profiles, so that even if the other worker is unable to get the internet access, they can get the updates via push messages
 
 ### Technologies Used 
 ```bash
@@ -32,6 +42,9 @@ Javascript
 
 ## Production link 
 <a href="http://rozgaar-app.herokuapp.com/" terget="_blank">RozGAAR : कोई काम छोटा नहीं होता।</a>
+
+## Ream more about RozGAAR
+<a href="https://docs.google.com/presentation/d/1Thj0tcDpVO9BrvOHFJkMq96FlFkiQHUkTsYfRLnST10/edit#slide=id.g12dbf99b2f2_0_199" terget="_blank">Presentation and Demo</a>
 
 
 
