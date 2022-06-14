@@ -77,11 +77,8 @@ Please make sure to update tests as appropriate.
 ## TEAM : CREATIVE_CREW
 [Utkarsh Goel](https://github.com/UtkarshGoel18)
 
-[Abhishek Jaiswal](https://github.com/abhishekjais-124)
+[Sandeep Yadav](https://github.com/ucandoit-sky)
 
-[Dheeraj Maurya](https://github.com/jareehd)
+[Anshika Yadav]
 
-[Ayush Avasthi](https://github.com/avasthiayush)
-
-[Prateek Pandey](https://github.com/pprockys)
 
